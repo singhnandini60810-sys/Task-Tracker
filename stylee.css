@@ -1,0 +1,262 @@
+/* GENERAL */
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:20px;
+background:#f6f2ff;
+color:#333;
+}
+
+h1,h2,h3{
+margin:0 0 10px 0;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.subtitle{
+color:#666;
+font-size:14px;
+}
+
+
+/* BUTTONS */
+
+button{
+background:#7c3aed;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#6d28d9;
+}
+
+
+/* TASK INPUT */
+
+.task-input-section{
+display:flex;
+gap:10px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.task-input-section input,
+.task-input-section select{
+padding:8px;
+border-radius:6px;
+border:1px solid #ddd;
+}
+
+
+/* TASK LIST */
+
+.task-list-section{
+margin-bottom:30px;
+}
+
+#taskList{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.task-card{
+background:white;
+padding:10px;
+border-radius:8px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border:1px solid #e6e6e6;
+}
+
+.task-buttons{
+display:flex;
+gap:8px;
+}
+
+.delete-btn{
+background:#ef4444;
+}
+
+.delete-btn:hover{
+background:#dc2626;
+}
+
+.edit-btn{
+background:#3b82f6;
+}
+
+.edit-btn:hover{
+background:#2563eb;
+}
+
+
+/* TRACKER GRID */
+
+.tracker-section{
+margin-bottom:40px;
+}
+
+.tracker-grid{
+display:grid;
+grid-template-columns:repeat(7,40px);
+gap:8px;
+margin-top:15px;
+}
+
+.day-box{
+width:40px;
+height:40px;
+background:#e9e5ff;
+border-radius:6px;
+cursor:pointer;
+}
+
+.day-complete{
+background:#7c3aed;
+}
+
+
+/* TRACKER STATS */
+
+.tracker-stats{
+margin-top:15px;
+display:flex;
+gap:25px;
+font-weight:bold;
+}
+
+
+/* WEEKLY DASHBOARD */
+
+.weekly-dashboard{
+margin-bottom:40px;
+}
+
+.weekly-grid{
+display:grid;
+grid-template-columns:repeat(7,40px);
+gap:8px;
+margin-top:10px;
+}
+
+.week-box{
+width:40px;
+height:40px;
+background:#ddd;
+border-radius:6px;
+}
+
+
+/* YEARLY HEATMAP */
+
+.yearly-dashboard{
+margin-bottom:40px;
+}
+
+.heatmap-grid{
+display:grid;
+grid-template-columns:repeat(30,14px);
+gap:4px;
+margin-top:15px;
+}
+
+.heat-box{
+width:14px;
+height:14px;
+background:#eee;
+border-radius:3px;
+}
+
+
+/* 12 COLOR LEVELS */
+
+/* VIOLET */
+
+.level1{background:#ede9fe;}
+.level2{background:#ddd6fe;}
+.level3{background:#c4b5fd;}
+.level4{background:#a78bfa;}
+
+/* BLUE */
+
+.level5{background:#bfdbfe;}
+.level6{background:#93c5fd;}
+.level7{background:#60a5fa;}
+.level8{background:#3b82f6;}
+
+/* YELLOW */
+
+.level9{background:#fef3c7;}
+.level10{background:#fde68a;}
+.level11{background:#facc15;}
+.level12{background:#eab308;}
+
+
+
+/* MODAL */
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:20px;
+border-radius:8px;
+display:flex;
+flex-direction:column;
+gap:10px;
+width:250px;
+}
+
+
+/* DARK MODE */
+
+.dark-mode{
+background:#0f172a;
+color:#e2e8f0;
+}
+
+.dark-mode .task-card{
+background:#1e293b;
+border-color:#334155;
+}
+
+.dark-mode .modal-content{
+background:#1e293b;
+}
+
+.dark-mode input,
+.dark-mode select{
+background:#0f172a;
+color:white;
+border:1px solid #475569;
+}
+
+.dark-mode .day-box{
+background:#334155;
+}
+
+.dark-mode .heat-box{
+background:#475569;
+}
