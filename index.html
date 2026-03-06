@@ -1,167 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Task Tracker</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
-
 <h1>Task Tracker</h1>
-<p class="subtitle">Track habits, streaks and productivity</p>
-
-<button id="darkModeToggle">
-🌙 Toggle Dark Mode
-</button>
-
+<button onclick="toggleDark()">🌙</button>
 </header>
 
-
-
-<!-- TASK CREATION -->
-
-<section class="task-input-section">
-
-<input 
-type="text"
-id="taskInput"
-placeholder="Enter new task">
-
-<select id="repeatType">
-
+<div class="task-input">
+<input id="taskInput" placeholder="New Task">
+<select id="repeat">
+<option value="none">No Repeat</option>
 <option value="daily">Daily</option>
 <option value="weekly">Weekly</option>
 <option value="monthly">Monthly</option>
-<option value="custom">Custom</option>
-
 </select>
 
-<input 
-type="time"
-id="reminderTime">
+<input type="time" id="reminder">
 
-<button id="addTaskBtn">
-Add Task
-</button>
-
-</section>
-
-
-
-<!-- TASK LIST -->
-
-<section class="task-list-section">
-
-<h2>Your Tasks</h2>
-
-<div id="taskList">
-
+<button onclick="addTask()">Add</button>
 </div>
 
-</section>
+<h2>Tasks</h2>
+<div id="taskList"></div>
 
-
-
-<!-- TASK TRACKER -->
-
-<section class="tracker-section">
-
-<h2 id="trackerTitle">
-Monthly Tracker
-</h2>
-
-<div id="trackerGrid" class="tracker-grid">
-
-</div>
-
-<div class="tracker-stats">
-
-<p>
-Current Streak: 
-<span id="streakCount">0</span>
-</p>
-
-<p>
-Total Completed:
-<span id="totalCompleted">0</span>
-</p>
-
-<p>
-Level:
-<span id="userLevel">Beginner</span>
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- WEEKLY DASHBOARD -->
-
-<section class="weekly-dashboard">
+<h2>Monthly Tracker</h2>
+<div id="tracker"></div>
 
 <h2>Weekly Dashboard</h2>
+<div id="weekly"></div>
 
-<div id="weeklyGrid" class="weekly-grid">
-
-</div>
-
-</section>
-
-
-
-<!-- YEARLY HEATMAP -->
-
-<section class="yearly-dashboard">
-
-<h2>Yearly Activity Heatmap</h2>
-
-<div id="yearlyHeatmap" class="heatmap-grid">
-
-</div>
-
-</section>
-
-
-
-<!-- EDIT TASK MODAL -->
-
-<div id="editModal" class="modal">
-
-<div class="modal-content">
-
-<h3>Edit Task</h3>
-
-<input 
-type="text"
-id="editTaskName">
-
-<button id="saveEditBtn">
-Save
-</button>
-
-<button id="cancelEditBtn">
-Cancel
-</button>
-
-</div>
-
-</div>
-
-
+<h2>Yearly Heatmap</h2>
+<div id="heatmap"></div>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
